@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'Acme';
+	src: url('fonts/Acme-Regular.ttf') format('ttf');
+    src: url('fonts/Acme-Regular.ttf') format('truetype');
+}
+/* public/css/style.css */
+.bgMenuBlur::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    border-radius: 100px;
+    background-color: rgba(229, 231, 235, 0.7); /* Change this color to the desired slate-200 color */
+}
+
+.active{
+    background-color: #cbd5e1;
+}
+
+.menuactive {
+    left: 0;
+    transform: translateX(0);
+    background-color: #ffffff;
+}
+.shapeblur{
+    backdrop-filter: blur(5px);
+    background-color: rgba(229, 231, 235, 0.7); /* Change this color to the desired slate-200 color */
+}
+
+/* Animasi melayang halus khusus maskot */
+    @keyframes bounce-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+    .animate-bounce-slow {
+        animation: bounce-slow 4s ease-in-out infinite;
+    }
